@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
-import { updateDoneState } from "../../controllers/taskController";
+import React, { useState } from 'react';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+
+import { updateDoneState } from '../../controllers/taskController';
 
 interface CheckboxProps {
   previousState: boolean;
@@ -17,17 +18,9 @@ const Checkbox = (props: CheckboxProps) => {
   };
 
   return (
-    <TouchableOpacity
-      style={styles.checkboxContainer}
-      onPress={handleToggle}
-      activeOpacity={0.8}
-    >
+    <TouchableOpacity style={styles.checkboxContainer} onPress={handleToggle} activeOpacity={0.8}>
       <View
-        style={[
-          styles.checkbox,
-          isChecked ? styles.checkboxChecked : styles.checkboxUnchecked,
-        ]}
-      >
+        style={[styles.checkbox, isChecked ? styles.checkboxChecked : styles.checkboxUnchecked]}>
         {isChecked && <Text style={styles.checkmark}>✓</Text>}
       </View>
     </TouchableOpacity>
@@ -36,28 +29,28 @@ const Checkbox = (props: CheckboxProps) => {
 
 const styles = StyleSheet.create({
   checkboxContainer: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   checkbox: {
     width: 28,
     height: 28,
     borderRadius: 4,
     borderWidth: 2,
-    borderColor: "gray",
-    justifyContent: "center",
-    alignItems: "center",
+    borderColor: 'gray',
+    justifyContent: 'center',
+    alignItems: 'center',
     marginRight: 10,
   },
   checkboxChecked: {
-    backgroundColor: "green",
-    borderColor: "green",
+    backgroundColor: 'green',
+    borderColor: 'green',
   },
   checkboxUnchecked: {
-    backgroundColor: "transparent",
+    backgroundColor: 'transparent',
   },
   checkmark: {
-    color: "white",
+    color: 'white',
     fontSize: 16,
   },
   label: {

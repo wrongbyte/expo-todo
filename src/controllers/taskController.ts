@@ -1,11 +1,12 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { ITask } from "../types/tasks";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+import { ITask } from '../types/tasks';
 
 export const getCurrentTasks = async () => {
   try {
-    const tasks = await AsyncStorage.getItem("currentTasks");
+    const tasks = await AsyncStorage.getItem('currentTasks');
     if (!tasks) {
-    return []
+      return [];
     }
     return JSON.parse(tasks);
   } catch (e) {
@@ -15,7 +16,7 @@ export const getCurrentTasks = async () => {
 
 export const updateCurrentTasks = async (tasks: ITask[]) => {
   const parsedTasks = JSON.stringify(tasks);
-  await AsyncStorage.setItem("currentTasks", parsedTasks);
+  await AsyncStorage.setItem('currentTasks', parsedTasks);
 };
 
 export const addTask = async (message: string) => {
@@ -30,7 +31,7 @@ export const addTask = async (message: string) => {
   };
   tasks.push(newTask);
   const parsedTasks = JSON.stringify(tasks);
-  await AsyncStorage.setItem("currentTasks", parsedTasks);
+  await AsyncStorage.setItem('currentTasks', parsedTasks);
   return tasks;
 };
 

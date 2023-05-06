@@ -1,7 +1,8 @@
-import * as React from "react";
-import TaskList from "./pages/TaskList";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import * as React from 'react';
+
+import TaskList from './pages/TaskList';
 
 const Stack = createNativeStackNavigator();
 

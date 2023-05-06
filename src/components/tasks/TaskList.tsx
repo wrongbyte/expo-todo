@@ -1,6 +1,6 @@
-import { View } from "react-native";
-import { Task } from "./Task";
-import { ITask, setTasksFn } from "../../types/tasks";
+import { View } from 'react-native';
+import { Task } from './Task';
+import { ITask, setTasksFn } from '../../types/tasks';
 
 export interface ITaskListProps {
   tasks: ITask[];
