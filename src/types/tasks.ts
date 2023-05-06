@@ -5,5 +5,3 @@ export interface ITask {
 }
 
 export type setTasksFn = (tasks: ITask[]) => void;
-
-
