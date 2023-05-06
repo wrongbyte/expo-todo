@@ -24,7 +24,7 @@ export const addTask = async (message: string) => {
   const id = lastId + 1;
   const newTask = {
     id,
-    nome: message,
+    title: message,
     userId: 1,
     done: false,
   };
